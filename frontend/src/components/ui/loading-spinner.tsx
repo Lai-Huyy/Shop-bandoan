@@ -1,0 +1,11 @@
+import { LoaderCircle } from 'lucide-react';
+import { cn } from '@/lib/utils';
+
+export function LoadingSpinner({ className }: { className?: string }) {
+  return (
+    <LoaderCircle
+      className={cn('h-5 w-5 animate-spin', className)}
+      aria-label="Loading"
+    />
+  );
+}

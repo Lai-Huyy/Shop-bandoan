@@ -1,0 +1,172 @@
+@import 'react-day-picker/style.css';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    color-scheme: light;
+    --background: 210 40% 98%;
+    --foreground: 222 47% 11%;
+    --card: 0 0% 100%;
+    --card-foreground: 222 47% 11%;
+    --primary: 24 95% 53%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 210 40% 96%;
+    --secondary-foreground: 222 47% 11%;
+    --muted: 210 40% 96%;
+    --muted-foreground: 215 16% 47%;
+    --border: 214 32% 91%;
+    --ring: 24 95% 53%;
+    --destructive: 0 84% 60%;
+    --radius: 0.75rem;
+  }
+
+  .dark {
+    color-scheme: dark;
+    --background: 222 47% 8%;
+    --foreground: 210 40% 98%;
+    --card: 222 47% 11%;
+    --card-foreground: 210 40% 98%;
+    --primary: 24 95% 58%;
+    --primary-foreground: 222 47% 11%;
+    --secondary: 217 33% 17%;
+    --secondary-foreground: 210 40% 98%;
+    --muted: 217 33% 17%;
+    --muted-foreground: 215 20% 65%;
+    --border: 217 33% 22%;
+    --ring: 24 95% 58%;
+    --destructive: 0 63% 45%;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply min-h-screen bg-background text-foreground antialiased;
+  }
+
+  button,
+  input,
+  select,
+  textarea {
+    font: inherit;
+  }
+
+  input:not([type='checkbox']):not([type='radio']),
+  select,
+  textarea {
+    @apply bg-background text-foreground placeholder:text-muted-foreground;
+  }
+}
+
+@keyframes home-float {
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+
+  50% {
+    transform: translate3d(0, -10px, 0);
+  }
+}
+
+.home-reveal {
+  opacity: 0;
+  transform: translate3d(0, 20px, 0);
+  transition:
+    opacity 650ms cubic-bezier(0.22, 1, 0.36, 1),
+    transform 650ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.home-reveal-visible {
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
+}
+
+.home-float {
+  animation: home-float 6s ease-in-out infinite;
+  will-change: transform;
+}
+
+.home-float-delay {
+  animation-delay: -2.4s;
+}
+
+@keyframes auth-dialog-overlay-enter {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes auth-dialog-content-enter {
+  from {
+    opacity: 0;
+    transform: translate(-50%, calc(-50% + 8px)) scale(0.96);
+  }
+
+  to {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
+
+@keyframes auth-dialog-form-enter {
+  from {
+    opacity: 0;
+    transform: translate3d(10px, 0, 0);
+  }
+
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.auth-dialog-overlay[data-state='open'] {
+  animation: auth-dialog-overlay-enter 180ms ease-out both;
+  backdrop-filter: blur(5px);
+}
+
+.auth-dialog-content[data-state='open'] {
+  animation: auth-dialog-content-enter 220ms ease-out both;
+}
+
+.auth-dialog-form {
+  animation: auth-dialog-form-enter 180ms ease-out both;
+}
+
+.auth-dialog-content > button {
+  color: rgb(255 255 255);
+}
+
+.auth-dialog-content > button:hover {
+  color: rgb(255 255 255);
+}
+
+.home-scrollbar {
+  scrollbar-color: hsl(var(--primary) / 0.45) transparent;
+  scrollbar-width: thin;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .home-reveal,
+  .home-float {
+    animation: none;
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+
+  .auth-dialog-overlay,
+  .auth-dialog-content,
+  .auth-dialog-form {
+    animation: none !important;
+  }
+}
