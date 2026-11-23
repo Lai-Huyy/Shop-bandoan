@@ -144,3 +144,8 @@ vite.config.ts.timestamp-*
 .vite/
 
 .codex/
+# AI Agent Skills
+.codex/
+backend/.agents/skills/
+backend/.claude/skills/
+backend/.windsurf/skills/
