@@ -1,0 +1,5 @@
+Food and drink illustrations: Twemoji, Twitter, Inc. and contributors.
+Source: https://github.com/jdecked/twemoji/tree/v17.0.0/assets/svg
+License: Creative Commons Attribution 4.0 International
+https://creativecommons.org/licenses/by/4.0/
+Adaptation: rasterized onto a cream background for NICEGA STORE sample products.

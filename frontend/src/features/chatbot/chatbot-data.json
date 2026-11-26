@@ -1,0 +1,45 @@
+{
+  "welcome": "Chào bạn! Bạn cần hướng dẫn mua hàng, thanh toán hay xem đơn đã đặt?",
+  "fallback": "Mình chưa có hướng dẫn cho câu hỏi này. Bạn có thể chọn một chủ đề bên dưới nhé.",
+  "topics": [
+    {
+      "label": "Voucher của tôi",
+      "action": "wallet",
+      "keywords": [
+        "voucher",
+        "vouchers",
+        "mã giảm giá",
+        "coupon",
+        "mã khuyến mãi",
+        "phiếu giảm giá"
+      ],
+      "answer": "Đây là các voucher trong ví của bạn còn lượt sử dụng."
+    },
+    {
+      "label": "Cách đặt hàng",
+      "keywords": ["cách mua", "hướng dẫn mua", "đặt hàng", "mua ngay"],
+      "answer": "Bạn mở sản phẩm, chọn Mua ngay hoặc Thêm giỏ. Khi thanh toán, hãy kiểm tra số lượng, chọn địa chỉ nhận hàng rồi xác nhận đặt hàng."
+    },
+    {
+      "label": "Thanh toán",
+      "keywords": ["thanh toán", "cod", "trả tiền", "tiền mặt"],
+      "answer": "NICEGA STORE hỗ trợ thanh toán khi nhận hàng (COD). Bạn có thể kiểm tra tổng tiền ở bước thanh toán trước khi đặt đơn."
+    },
+    {
+      "label": "Theo dõi đơn hàng",
+      "keywords": [
+        "xem đơn",
+        "đơn của tôi",
+        "đơn hàng ở đâu",
+        "trạng thái đơn",
+        "kiểm tra đơn"
+      ],
+      "answer": "Bạn đăng nhập, mở mục Đơn hàng rồi chọn đơn muốn xem. Trang chi tiết hiển thị trạng thái và lịch sử cập nhật của đơn."
+    },
+    {
+      "label": "Lời chào",
+      "keywords": ["chào", "hello", "hi", "helo", "shop oi"],
+      "answer": "Chào bạn, NICEGA có thể hướng dẫn bạn đặt hàng, thanh toán hoặc theo dõi đơn. Bạn muốn xem phần nào?"
+    }
+  ]
+}

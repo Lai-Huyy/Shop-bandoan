@@ -8,6 +8,15 @@ import type {
 } from '@/types/auth';
 
 export const authService = {
+  changePassword(currentPassword: string, newPassword: string) {
+    return getApiData<{ message: string }>(
+      apiClient.patch('/users/change-password', {
+        currentPassword,
+        newPassword,
+      }),
+    );
+  },
+
   async login(payload: LoginPayload): Promise<AuthResponse> {
     const response = await getApiData<AuthResponse>(
       apiClient.post('/auth/login', payload, { skipAuthRefresh: true }),

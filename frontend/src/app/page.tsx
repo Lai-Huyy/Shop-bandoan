@@ -1,6 +1,7 @@
 import { StorefrontHome } from '@/components/home/storefront-home';
 import { StorefrontFooter } from '@/components/home/storefront-footer';
 import { StorefrontHeader } from '@/components/home/storefront-header';
+import { StoreChat } from '@/features/chatbot/store-chat';
 
 export default function HomePage() {
   return (
@@ -8,6 +9,7 @@ export default function HomePage() {
       <StorefrontHeader />
       <StorefrontHome />
       <StorefrontFooter />
+      <StoreChat />
     </div>
   );
 }
